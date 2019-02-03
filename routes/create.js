@@ -1,14 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var Pokemon = require('../db.json');
-var request = require("request");
+var request = require('request');
 
 /* GET create page. */
-// router.get('/', function(req, res, next) {
-//   res.render('create', {message: false});
-// });
+router.get('/', function(req, res, next) {
+  res.render('/create', {message: false});
+});
 
-router.post('/', function(req, res, next) {
+
+router.post('/create', function(req, res, next) {
 
     //test if data is coming through
     res.send(req.body);

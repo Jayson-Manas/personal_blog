@@ -19,6 +19,8 @@ router.get('/view', function(req, res, next) {
   res.render('view', {page:'view', menuId:'view'});
 });
 
+
+
 router.get('/', function (req, res, next) {
 
   let data = {
