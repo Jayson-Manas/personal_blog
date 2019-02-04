@@ -58,7 +58,7 @@
   </div>
 </div>
 
-<script src="js/ejs.min.js"></script>
+<!-- <script src="js/ejs.min.js"></script> -->
 <script>
 
   //the url we are making a request to
@@ -73,9 +73,9 @@
           let pokemon = data;
           
           // With jQuery:
-          $('#all').html(html);
+        //   $('#all').html(html);
           // Vanilla JS:
-          // document.getElementById('all').innerHTML = html;
+          var html= document.getElementById('all').innerHTML;
       }, 
       error: function(error){
           console.log(error);

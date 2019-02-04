@@ -7,8 +7,8 @@ var logger = require('morgan');
 
 
 
-// var Pokemon = require('./db.json');
-app.post('/create');
+var Pokemon = require('./db.json');
+
 
 var indexRouter = require('./routes/index');
 var createRouter = require('./routes/create');
@@ -24,7 +24,7 @@ app.use(logger('dev'));
 app.use(express.json());
 //bodyParser Middleware
 app.use(bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cookieParser());
 
@@ -33,7 +33,7 @@ app.use(cookieParser());
 //express middleware
 app.use(express.json());
 app.use(express.urlencoded({
-  extended: true
+  extended: false
 }));
 
 //register routes after middleware

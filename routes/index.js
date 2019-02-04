@@ -20,7 +20,6 @@ router.get('/view', function(req, res, next) {
 });
 
 
-
 router.get('/', function (req, res, next) {
 
   let data = {
