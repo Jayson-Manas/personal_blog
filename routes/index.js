@@ -16,7 +16,7 @@ router.get('/create', function(req, res, next) {
 });
 
 router.get('/view', function(req, res, next) {
-  res.render('view', {page:'view', menuId:'view'});
+  // res.render('view', {page:'view', menuId:'view'});
 });
 
 
