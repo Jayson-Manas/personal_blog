@@ -14,7 +14,7 @@ router.post('/', function(req, res, next) {
     res.send(req.body);
 
     //set a new dynamic id
-    var id = Pokemon.pokemon.length;
+    var id = Pokemon.pokemon.length+=1;
 
     //make a post request to our database
     request({
