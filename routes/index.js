@@ -11,13 +11,13 @@ router.get('/', function(req, res, next) {
   res.render('index', {page:'Home', menuId:'home'});
 });
 
-router.get('/create', function(req, res, next) {
-  res.render('create', {page:'create', menuId:'create'});
-});
+// router.get('/create', function(req, res, next) {
+//   res.render('create', {page:'create', menuId:'create'});
+// });
 
-router.get('/view', function(req, res, next) {
-  res.render('view', {page:'view', menuId:'view'});
-});
+// router.get('/view', function(req, res, next) {
+//   res.render('view', {page:'view', menuId:'view'});
+// });
 
 
 router.get('/', function (req, res, next) {

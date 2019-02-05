@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-    <style>
-        body { padding-top:15px; background-color: #ccc;}
-        img { width: 100%;}
-    </style>
-    <% include partials/head %> 
-
 </head>
 <body>
 
-<% include partials/menu %>
+
     <div class="container">
         <div class="panel panel-danger">
             <div class="panel panel-heading text-center">
                 <h1>It's Add A New Hero Time.</h1>
             </div>
             <div class="panel-body" id="all">
-
-                              
+                    <% if (message) { %>
+                        <div class="alert alert-success" role="alert">
+                            <%= message %>
+                        </div>
+                        <% } %>
+                     
+                           
                 <form method="POST" action="">
 
                     <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
@@ -43,6 +42,7 @@
                 </form>
 
             </div>
+            
             <div class="panel-footer text-center">
                 <p>All rights reserved 2018 | Nate.</p>
             </div>

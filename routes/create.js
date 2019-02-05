@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 
     //test if data is coming through
-    res.send(req.body);
+    // res.send(req.body);
 
     //set a new dynamic id
     var id = Pokemon.pokemon.length+=1;
