@@ -10,6 +10,7 @@
 </head>
 <body>
 
+    <% include partials/menu %>
 
     <div class="container">
         <div class="panel panel-danger">
@@ -17,11 +18,7 @@
                 <h1>It's Add A New Hero Time.</h1>
             </div>
             <div class="panel-body" id="all">
-                    <% if (message) { %>
-                        <div class="alert alert-success" role="alert">
-                            <%= message %>
-                        </div>
-                        <% } %>
+               
                      
                            
                 <form method="POST" action="">
