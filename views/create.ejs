@@ -13,17 +13,7 @@
     <!-- include summernote css/js -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
-<script>
-$(document).ready(function() {
-  $('#summernote').summernote();
-});
 
-$('#summernote').summernote({
-        placeholder: 'Hello bootstrap 4',
-        tabsize: 2,
-        height: 100
-      });
-</script>
 </head>
 <body>
     <% include partials/menu %>
@@ -35,33 +25,50 @@ $('#summernote').summernote({
             <div class="panel panel-heading text-center">
                 <h1>Share Your Interesting Facts About Mathematics</h1>
             </div>    
-            <div id="summernote">Hello Summernote</div>
                            
-                <!-- <form method="POST" action="">
+                <form method="POST" action="">
                     <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
                         <label for="exampleInputName">Name of POST</label>
-                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Enter Hero Name" name="name">
-                        <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="text" class="form-control click2edit" id="summernote" aria-describedby="heroName" placeholder="Enter Hero Name" name="name">
+                         <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small>  -->
                     </div>
-                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                    <!-- <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
                         <label for="exampleInputURL">Image URL</label>
-                        <input type="text" class="form-control" id="exampleInputURL" placeholder="Link to hero image" name="image_url">
-                    </div>
-                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+                        <input type="text" class="form-control click2edit" id="exampleInputURL" placeholder="Link to hero image" name="image_url">
+                    </div>  -->
+                     <!-- <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
                             <label for="exampleInputDescription">description</label>
-                            <input type="text" class="form-control" id="exampleInputDescription" placeholder="Link to description" name="description">
-                        </div>
+                            <input type="text" class="form-control click2edit" id="exampleInputDescription" placeholder="Link to description" name="description">
+                        </div> -->
                     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
                         <button type="submit" class="btn btn-success btn-block">ADD a POST</button>
-                    </div> -->
-                    <textarea id="summernote" name="editordata"></textarea>
+                    </div>
                 </form>
 
             </div>
             
             
-        </div>
-    
+        </div> 
+        <!-- <div class="click2edit">click2edit</div> -->
+
+        <!-- <div id="summernote">Hello Summernote</div> -->
+        <!-- <textarea id="summernote" name="editordata"></textarea> -->
+        <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Edit 1</button>
+        <button id="save" class="btn btn-primary" onclick="save()" type="button">Save 2</button>
+
+    <script>
+            $(document).ready(function() {
+             $('#summernote').summernote();
+                });
+            var edit = function() {
+                $('.click2edit').summernote({focus: true});
+                };
+
+                var save = function() {
+                var markup = $('.click2edit').summernote('code');
+                $('.click2edit').summernote('destroy');
+                };
+    </script>
 
 </body>
 </html>
