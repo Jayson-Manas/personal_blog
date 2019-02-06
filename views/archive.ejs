@@ -35,11 +35,11 @@
 <div class="container">
     <div class="panel panel-danger">
       <div class="panel panel-heading text-center">
-          <h1>It's Hero Time.</h1>
+          <h1>Mathematics Archive</h1>
       </div>
       <div class="panel-body" id="all">
 
-          <a href="/create ">
+          <!-- <a href="/create ">
               <div class="col-xs-6 col-md-2">
                   <div class="panel panel-default">
                       <div class="panel-body">
@@ -50,17 +50,9 @@
                       </div>
                   </div>
               </div> 
-          </a>
+          </a> -->
 
       </div>
-
-     
-             
-      <div class="panel-footer text-center">
-          <p>All rights reserved 2018 | Nate.</p>
-      </div>
-  </div>
-</div>
 
 <!-- <script src="js/ejs.min.js"></script> -->
 <script>
@@ -121,8 +113,11 @@
               image.setAttribute('src', value.image);
 
               var name = document.createTextNode(value.name);
+              var description = document.createTextNode(value.description)
 
               footer.appendChild(name);
+              
+              footer.appendChild(description);
               body.appendChild(image);
               panel.appendChild(body);
               panel.appendChild(footer);
@@ -140,5 +135,5 @@
 </script>
 
 </body>
-<!-- <% include partials/script %> -->
+<% include partials/script %>
 </html>

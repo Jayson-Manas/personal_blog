@@ -8,31 +8,39 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <style>
-        body { padding-top:15px; background-color: #ccc;}
+        body { padding-top:15px; background-color: rgb(53, 144, 156);  background-image: url('https://libshelflife.files.wordpress.com/2014/11/blackboard-equations-728x242.jpg');}
         img { width: 100%;}
+        .imgSize{height: 300px; width: 300px; }
+        
         
     </style>
  <% include partials/head %> 
 </head>
 <body>
 <% include partials/menu %>
-<!-- <div class="container-fluid bg-3 text-center">     -->
-  <!-- <h3><%= page %></h3><br> -->
-  <!-- <div class="row">
+<div class="container-fluid bg-3 text-center">  
+  <h3><%= page %></h3><br>
+  <h4><p>Welcome to Everything Maths, interesting facts about mathematics</p></h4>
+  <br>
+   <div class="row">
     <div class="col-sm-4">
+        <img class="imgSize" src="https://famous-mathematicians.com/images/albert-einstein.jpg" alt="">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       
     </div>
     <div class="col-sm-4"> 
+
+        <img class="imgSize" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/220px-GodfreyKneller-IsaacNewton-1689.jpg" alt="" height="500px" width="800px">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="col-sm-4"> 
+        <img class="imgSize" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5cUPyfgDMHqwZmHw5JjVK5GS6lJFJS0Y6W_Q_ypJdXjHETjv" alt="">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
   </div>
-</div> -->
+</div> 
 
-<div class="container">
+<!-- <div class="container">
     <div class="panel panel-danger">
       <div class="panel panel-heading text-center">
           <h1>It's Hero Time.</h1>
@@ -60,10 +68,10 @@
           <p>All rights reserved 2018 | Nate.</p>
       </div>
   </div>
-</div>
+</div> -->
 
 <!-- <script src="js/ejs.min.js"></script> -->
-<script>
+<!-- <script>
 
   //the url we are making a request to
   var url = "http://localhost:8000/pokemon";
@@ -137,8 +145,8 @@
           console.log(error);
       }
   });
-</script>
+</script> -->
 
 </body>
-<!-- <% include partials/script %> -->
+<% include partials/script %>
 </html>
