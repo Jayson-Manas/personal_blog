@@ -5,12 +5,30 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var createRouter= require('./routes/create');
-var viewRouter = require('./routes/archive');
-var updateRouter = require('./routes/update');
-var deleteRouter = require('./routes/delete');
+var routes = [
+  require('./routes/index'),
+  require('./routes/create'),
+  require('./routes/sign_in'),
+  require('./routes/edit'),
+  require('./routes/view'),
+  require('./routes/register'),
+  require('./routes/delete'),
+  require('./routes/sign_out'),
+  require('./routes/archive'),
+  // require('./routes/contact'),
+];
+
+// // global variables
+
+// // variables for signed in user
+//   // gets username to display as loged in
+//   app.locals.user = "";
+//   // if logedIn is true it allows for editing,deleting and creating
+//   // it represents a loged in user
+// app.locals.logedIn = false;
+// app.locals.regError = "";
+// app.locals.signError = "";
+// app.locals.cookieWarning = false;
 
 
 var app = express();
@@ -26,12 +44,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/create',createRouter);
-app.use('/archive', viewRouter);
-app.use('/update', updateRouter);
-app.use('/delete', deleteRouter);
+app.use('/', routes[0]);
+app.use('/create', routes[1]);
+app.use('/sign_in', routes[2]);
+app.use('/edit', routes[3]);
+app.use('/view', routes[4]);
+app.use('/register', routes[5]);
+app.use('/delete', routes[6]);
+app.use('/sign_out', routes[7]);
+app.use('/archive', routes[8]);
+// app.use('/contact', routes[9]);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
