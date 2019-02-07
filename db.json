@@ -49,6 +49,52 @@
       "id": 10,
       "name": "Ditto",
       "image": "https://vignette.wikia.nocookie.net/pokemon/images/5/53/132Ditto_OS_anime_2.png/revision/latest?cb=20140318031545"
+    },
+    {
+      "id": "11",
+      "name": "pika chooooo",
+      "image": "https://cdn.ndtv.com/tech/images/gadgets/pikachu_hi_pokemon.jpg?output-quality=80",
+      "description": "click here for a summernote experience"
+    },
+    {
+      "id": "12",
+      "name": "pika chooooo     ",
+      "image": "https://cdn.ndtv.com/tech/images/gadgets/pikachu_hi_pokemon.jpg?output-quality=80",
+      "description": "Hello Summernote"
+    },
+    {
+      "id": "13",
+      "name": "pika chooooo",
+      "image": "https://cdn.ndtv.com/tech/images/gadgets/pikachu_hi_pokemon.jpg?output-quality=80",
+      "description": "click here for a summernote experience kuda"
+    },
+    {
+      "id": "14",
+      "name": "pika chooooo2",
+      "image": "https://cdn.ndtv.com/tech/images/gadgets/pikachu_hi_pokemon.jpg?output-quality=80",
+      "description": "click here for a summernote experience test 2"
+    },
+    {
+      "id": "15",
+      "name": "",
+      "image": "",
+      "description": "click here for a summernote experience 3"
+    },
+    {
+      "id": "16",
+      "name": "charazard",
+      "image": "https://vignette.wikia.nocookie.net/nintendo/images/f/ff/Mega_Charizard_Y.png/revision/latest?cb=20160229050101&path-prefix=en",
+      "description": "click here for a summernote experience jvhvhvhjv"
     }
-  ]
+  ],
+
+"users": [
+  {
+    "id": "1",
+    "username": "Jayson",
+    "email": "jaysonmanas@gmail.com",
+    "password": "jayson"
+  }
+]
 }
+
