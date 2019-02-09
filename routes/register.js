@@ -14,7 +14,7 @@ router.get('/',function(req,res,next){
 
 });
 
-//posts create request
+//pokemon create request
 // create a new user
 router.post('/',function(req,res,next){
 

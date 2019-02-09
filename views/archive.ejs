@@ -10,6 +10,9 @@
     <style>
         body { padding-top:15px; background-color: rgb(53, 144, 156);  background-image: url('https://libshelflife.files.wordpress.com/2014/11/blackboard-equations-728x242.jpg'); background-attachment: fixed}
         img { width: 100%;}
+        #myNavbar{
+            position: sticky;
+        }
         
     </style>
  
@@ -44,10 +47,12 @@
                 <div class="col-xs-6 col-md-2">
                     <div class="panel panel-default">
                         <div class="panel-body">
+                                <%-poke.name %>
+
                             <img src="<%-poke.image %>">
                         </div>
                         <div class="panel-footer">
-                            <%-poke.name %>
+                            <a href="/view/<%-poke.id %>">read more</a>
                         </div>
                     </div>
                 </div> 

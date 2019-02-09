@@ -33,14 +33,14 @@
           <p><%= user %></p>
           <div class="input_box">
             <h3>Title</h3>
-            <input type="text" name="title" value="<%= posts[id].title %>" placeholder="Title">
+            <input type="text" name="title" value="<%= pokemon[id].title %>" placeholder="Title">
           </div>
           <div class="input_box">
             <h3>Image URL:</h3>
-            <input type="text" name="image" value="<%= posts[id].image %>" placeholder="Image URL">
+            <input type="text" name="image" value="<%= pokemon[id].image %>" placeholder="Image URL">
           </div>
           <h3>Post Content:</h3>
-          <textarea id="summernote" name="content"><%- posts[id].content %></textarea>
+          <textarea id="summernote" name="content"><%- pokemon[id].content %></textarea>
           <button type="submit" name="submit" class="edit_button"><p>Edit</p></button>
         </form>
 

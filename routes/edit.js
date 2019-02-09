@@ -9,24 +9,24 @@ router.get('/:id',function(req,res,next){
 
   // var to find index
   var id ;
-  var Posts = dataBase.posts;
+  var pokemon = dataBase.pokemon;
   // loop to find index
-  for(var i = 0; i < Posts.length; i++){
-    if (Posts[i]. id == req.params.id){
+  for(var i = 0; i < pokemon.length; i++){
+    if (pokemon[i]. id == req.params.id){
       id = i;
     }
   }
 
   res.render('edit',{
     title : "Edit",
-    posts : dataBase.posts,
+    pokemon : dataBase.pokemon,
     id : id,
   });
 
 });
 
 
-// posts the edit request
+// pokemon the edit request
 router.post('/:id',function(req,res,next){
 
   // gets the content
@@ -47,7 +47,7 @@ router.post('/:id',function(req,res,next){
 
   // post request
   request({
-    url:"http://localhost:8080/posts/"+ req.params.id,
+    url:"http://localhost:8080/pokemon/"+ req.params.id,
     method:"PATCH",
     form:{
       author:req.body.author,

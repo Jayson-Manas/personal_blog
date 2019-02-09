@@ -9,8 +9,11 @@
     
 
     <style>
-        body { padding-top:15px; background-color: #ccc;}
+        body { padding-top:15px; background-color: rgb(53, 144, 156);  background-image: url('https://libshelflife.files.wordpress.com/2014/11/blackboard-equations-728x242.jpg'); background-attachment: fixed}
         img { width: 100%;}
+        #myNavbar{
+            position: sticky;
+        }
     </style>
   
 
@@ -20,7 +23,7 @@
 
     <div class="container">
         <% if (title) { %>
-            <h2><%= title %></h2>
+            <h2 class="panel panel-danger text-center" style="color:blue"><%= title %></h2>
         <% } %>
         <div class="panel panel-danger">
             <div class="panel panel-heading text-center">
@@ -33,6 +36,11 @@
                         <%= message %>
                     </div>
                 <% } %> 
+                <%if (logedIn == false){%>
+                    <a href="/sign_in"><button type="button" name="button" class="log_button"><p>Log In</p></button></a>
+                  <%}else{%>
+                    <a href="/sign_out"><button type="button" name="button" class="log_button"><p>Log Out</p></button></a>
+                  <%}%>
 
                 <a href="/create">
                     <div class="col-xs-6 col-md-2">
@@ -41,7 +49,7 @@
                                 <img src="https://png.icons8.com/ios/1600/add.png">
                             </div>
                             <div class="panel-footer">
-                                New pokemon
+                                New post
                             </div>
                         </div>
                     </div> 
@@ -57,7 +65,7 @@
                                     <img src="<%-poke.image %>">
                                 </div>
                                 <div class="panel-footer">
-                                    <%-poke.description %>
+                                    <p>read more</p>
                                 </div>
                             </div>
                         </div> 
@@ -65,8 +73,21 @@
                 <% }); %>   
 
             </div>
+             <!-- if there is no cookie show this -->
+        <% if(cookieWarning == false){%>
+            <div id="cookie">
+                    <figure>
+                      <img src="/images/cookie.gif_c200" alt="">
+                    </figure>
+                    <h4>Want a Cookie?</h4>
+                    <p>This web site uses cookies to save user data and improve your experience!</p>
+                    <form  method="post">
+                      <button type="submit" name="button"><p>Confirm</p></button>
+                    </form>
+                  </div>
+          <%}%>
             <div class="panel-footer text-center">
-                <p>All rights reserved 2018 | Nate.</p>
+                <p>All rights reserved 2018 | JM.</p>
             </div>
         </div>
     </div>

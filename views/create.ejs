@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hero App | New</title>
+    
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -16,6 +17,10 @@
     <style>
         body { padding-top:15px; background-color: #ccc;}
         img { width: 100%;}
+        #myNavbar{
+            position: sticky;
+            
+        }
     </style>
 </head>
 <body>
@@ -57,17 +62,18 @@
 
             </div>
             <div class="panel-footer text-center">
-                <p>All rights reserved 2018 | Nate.</p>
+                <p>All rights reserved 2018 | JM.</p>
             </div>
         </div>
     </div>
 <script>
-$('#summernote').summernote({
-  height: 300,                 // set editor height
-  minHeight: null,             // set minimum height of editor
-  maxHeight: null,             // set maximum height of editor
-  focus: true                  // set focus to editable area after initializing summernote
-});
+// $('#summernote').summernote({
+//   height: 300,                 // set editor height
+//   minHeight: null,             // set minimum height of editor
+//   maxHeight: null,             // set maximum height of editor
+//   focus: true                  // set focus to editable area after initializing summernote
+// });
+var markupStr = $('#summernote').summernote('code');
 </script>
 </body>
 </html>
