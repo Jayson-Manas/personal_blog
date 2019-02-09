@@ -9,30 +9,16 @@
 
     <style>
         body { padding-top:15px; background-color: rgb(53, 144, 156);  background-image: url('https://libshelflife.files.wordpress.com/2014/11/blackboard-equations-728x242.jpg'); background-attachment: fixed}
-        img { width: 100%; height: 30em;}
+        img { width: 100%;}
         
     </style>
  
 </head>
 <body>
-<% include partials/menu.ejs %>
+
+    <% include partials/menu.ejs %>
 
 
-<!-- <div class="container-fluid bg-3 text-center">     -->
-  <!-- <h3><%= page %></h3><br> -->
-  <!-- <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-</div> -->
 
 <div class="container">
     <div class="panel panel-danger">
@@ -53,11 +39,27 @@
                   </div>
               </div> 
           </a> -->
+          <% pokemon.pokemon.forEach(function(poke){ %>
+            <a href="/view/<%-poke.id %>">
+                <div class="col-xs-6 col-md-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="<%-poke.image %>">
+                        </div>
+                        <div class="panel-footer">
+                            <%-poke.name %>
+                        </div>
+                    </div>
+                </div> 
+            </a>
+        <% }); %>   
 
       </div>
 
+     
+
 <!-- <script src="js/ejs.min.js"></script> -->
-<script>
+<!-- <script>
 
   //the url we are making a request to
   var url = "http://localhost:8000/pokemon";
@@ -100,7 +102,7 @@
           $.each(data, function(index, value){
 
               var container = document.createElement('div');
-              container.className = 'col-md-4 col-md-4';
+              container.className = 'col-md-2 col-md-4';
 
               var panel = document.createElement('div');
               panel.className = 'panel panel-default';
@@ -147,7 +149,7 @@
                 </div>
             </div>
         </div>
-    </a>
+    </a> -->
 
 </body>
 <% include partials/script %>

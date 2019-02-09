@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-// var Pokemon = require('../db.json');
+var Pokemon = require('../db.json');
 var request = require("request");
 
 /* GET create page. */
@@ -28,6 +28,8 @@ router.post('/:pokeId', function(req, res, next) {
     form: {
         name: req.body.name,
         image: req.body.image_url,
+        description: req.body.editordata,
+
     }
     }, function(error, response, body) {
         // console.log(body);

@@ -3,7 +3,7 @@ var router = express.Router();
 var Pokemon = require('../db.json');
 var request = require("request");
 /* GET create page. */
-router.get('/view/:pokeId', function(req, res, next) {
+router.get('/:pokeId', function(req, res, next) {
     
     console.log(req.params.pokeId)
   //make a post request to our database
@@ -19,8 +19,7 @@ router.get('/view/:pokeId', function(req, res, next) {
             pokemon: Pokemon, 
             message: 'Successfully Removed.',
         }
-
-        res.redirect('/', data);
+        res.redirect('..');
     });
 });
 
