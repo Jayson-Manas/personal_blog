@@ -9,7 +9,12 @@
 
     <style>
         body { padding-top:15px; background-color: #ccc;}
-        img { width: 100%;}
+        img { }
+        .post_view{
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -22,9 +27,12 @@
             <div class="panel-body" id="all">
 
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                    <div class="post_view">
                         <img src="<%= poke.image %>">
                     </div>
+                    <div class="post_view">
+                            <%-poke.description %>
+                        </div>
                     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
                         <br>
                         <a href="/update/<%= poke.id %>" class="btn btn-block btn-primary">Update</a>
