@@ -48,15 +48,12 @@ Creating app which allows a user to post blogs about interesting topics.
 - VSCode
 - Terminal/Command Line
 - Node JS
-
-##Resources used: 
+---
+## Resources used: 
 - w3schools
-               - fullstack overflow
--lecturers credited: Crezell
-                                    Nate
-                                    Garth
-                                    Devan
-
+- fullstack overflow
+- lecturers credited: Nate, Garth & Devan
+---
 ## Contributers
 Jayson Manas
 
