@@ -51,7 +51,7 @@ Creating app which allows a user to post blogs about interesting topics.
 ---
 ## Resources used: 
 - w3schools
-- fullstack overflow
+- stack overflow
 - lecturers credited: Nate, Garth & Devan
 ---
 ## Contributers
