@@ -41,7 +41,7 @@ router.post('/',function(req,res,next){
   // create new membership account
   if(usernameUsed != true){
     request({
-      url:"http://localhost:8080/users",
+      url:"http://localhost:8000/users",
       method:"POST",
       form:{
         id:id,

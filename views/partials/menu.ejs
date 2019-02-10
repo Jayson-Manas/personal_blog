@@ -26,11 +26,11 @@
       </div>
       <div class="signIn_signUp">
         <% if (logedIn == false){%>
-          <a href="/sign_in"><button type="button" name="button"><p class="sign_button">Log In</p></button></a>
+          <a href="/sign_in"><button type="button" name="button" class="btn btn-primary"><p class="sign_button">Log In</p></button></a>
           <p class="or">or</p>
-          <a href="/register"><button type="button" name="button"><p class="sign_button">Sign Up</p></button></a>
+          <a href="/register"><button type="button" name="button" class="btn btn-primary"><p class="sign_button">Sign Up</p></button></a>
         <%}else{%>
-          <a href="/sign_out"><button type="button" name="button"><p class="sign_button">Log Out</p></button></a>
+          <a href="/sign_out"><button type="button" name="button" class="btn btn-primary"><p class="sign_button">Log Out</p></button></a>
         <%}%>
       </div>
     
