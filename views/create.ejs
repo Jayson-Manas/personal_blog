@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Hero App | New</title>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="./stylesheets/style.css">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -38,7 +39,8 @@
                     <%= message %>
                 </div>
                 <% } %> 
-                
+                <% if(logedIn == true){%>
+
                 <form method="POST" action="">
 
                     <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
@@ -61,6 +63,9 @@
                 </form>
 
             </div>
+            <%}else{%>
+                <p class="logged_out">Please <a href="/sign_in">Log In</a> before attempting to create a post!</p>
+              <%} %>
             <div class="panel-footer text-center">
                 <p>All rights reserved 2018 | JM.</p>
             </div>

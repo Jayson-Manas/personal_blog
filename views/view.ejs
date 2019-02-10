@@ -35,9 +35,14 @@
                         </div>
                     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
                         <br>
+                <% if(logedIn == true){%>
+
                         <a href="/update/<%= poke.id %>" class="btn btn-block btn-primary">Update</a>
                         <br>
                         <a href="/delete/<%= poke.id %>" class="btn btn-block btn-danger">Delete</a>
+                        <%}else{%>
+                            <p class="logged_out">Please <a href="/sign_in">Log In</a> before attempting to create a post!</p>
+                          <%} %>
                     </div>
                 </div>  
 
