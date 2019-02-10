@@ -15,21 +15,16 @@
     <!-- include summernote css/js -->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
-    <style>
-        body { padding-top:15px; background-color: #ccc;}
-        img { width: 100%;}
-        #myNavbar{
-            position: sticky;
-            
-        }
-    </style>
+    
+    <% include partials/head.ejs %>
+
 </head>
 <body>
     <% include partials/menu.ejs %>
 
     <div class="container">
         <div class="panel panel-danger">
-            <div class="panel panel-heading text-center">
+            <div class="text-center text-white bg-dark">
                 <h1>Create A New POST</h1>
             </div>
             <div class="panel-body" id="all">

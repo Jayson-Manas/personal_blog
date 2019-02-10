@@ -13,7 +13,7 @@ var Pokemon = require('../db.json');
 
 router.get('/', function (req, res, next) {
 
-    let data = {
+    let data = {      
         title: 'Latest Posts',
         pokemon : Pokemon, 
         message: false,
