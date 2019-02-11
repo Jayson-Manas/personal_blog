@@ -57,4 +57,4 @@ Creating app which allows a user to post blogs about interesting topics.
 ## Contributers
 Jayson Manas
 
-This is the live link to my web application:
+This is the live link to my web application:http://math-post-personal-blog.7e14.starter-us-west-2.openshiftapps.com/
