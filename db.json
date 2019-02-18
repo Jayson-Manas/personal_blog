@@ -43,6 +43,18 @@
       "username": "nikita",
       "email": "nikita@gmail.com",
       "password": "nikita"
+    },
+    {
+      "id": "5",
+      "username": "TY",
+      "email": "TY@GMAIL.COM",
+      "password": "TY123"
+    },
+    {
+      "id": "6",
+      "username": "garth",
+      "email": "garth@gamil.com",
+      "password": "garth123"
     }
   ]
 }
